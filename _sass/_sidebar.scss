@@ -1,0 +1,47 @@
+#sidebar{
+    border-left: 5px solid black;
+    padding-left: 30px;
+    
+    padding-bottom: 70px;
+
+    ul{
+        padding-bottom: 30px; 
+    }
+
+
+    input{
+        border: $list_border_width $list_border_type $main_text_color;
+        display: inline;
+        padding: 5px;
+        margin: 5px 5px 5px 0px;
+        background: $content-background;
+        //background: mix($content-background, $base-color, 90%);
+
+        &[type="text"]{
+            background: $content-background;
+
+            &:hover{
+                background: $content-background;
+            }
+        }
+        
+
+        &:hover{
+            background: mix($content-background, $base-color, 90%);
+        }
+    }
+}
+
+.sidebar{
+    width: 20vw;
+    background: $sidebar_background;
+    color: $sidebar_color;
+    float: left;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+
+    a{
+        color: mix(white, $link_color, 70%);
+    }
+}

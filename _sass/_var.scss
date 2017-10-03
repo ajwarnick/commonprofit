@@ -1,0 +1,84 @@
+$main_background_color: #fff;
+$main_text_color: black;
+$sidebar_background: black;
+$sidebar_color: white;
+
+
+//REG TAGS
+//$base-color: #F00F02;
+$base-color: blue;
+$wrong-color: red;
+//$content-background: #FfF0F0;
+$content-background: white;
+$dark_border: black;
+
+//A Tag
+$link_color: blue;
+$link_underline_color: mix(white, $link_color, 70%);;
+
+
+
+//Grid Layout
+$row-height: 200px;
+$hover_border: 5px solid blue;
+$loader-size: 30px;
+$loader-color: blue;
+$number_of_items: 5;
+$grid_item_hover_padding: .25em .45em .25em .45em;
+$grid_item_hover_margin: 10px;
+
+$number_of_cards_in_row: 5;
+$width_of_card: calc(100% / #{$number_of_cards_in_row});
+$height_of_card: calc((#{$width_of_card} * 3)/4);
+
+
+// Hamburger-icon 
+$hb_height-icon: 30px;
+$hb_width-line: 30px;
+$hb_height-line: 5px;
+
+$hb_transition-time: 0.4s;
+$hb_rotation: 45deg;
+$hb_translateY: ($hb_height-icon / 2);
+$hb_translateX: 0;
+
+
+//list style
+
+$list_border_width: 5px;
+$list_border_type: solid;
+$list_border_color: blue;
+
+@mixin sans() {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@mixin serif() {
+    //font-family: 'Playfair Display', serif;
+    font-family: $main_font;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin bold(){
+    font-family: $text_font;
+    font-weight: 700; 
+}
+
+
+//HELPER CLASSES
+.horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

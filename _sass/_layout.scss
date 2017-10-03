@@ -1,3 +1,9 @@
-body{
-    background: red;
+.content{
+    width: 80vw;
+    background: $main_background_color;
+    color: $main_text_color;
+    float: left;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }

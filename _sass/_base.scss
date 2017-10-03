@@ -1,0 +1,25 @@
+::-moz-selection { 
+    background-color: $base-color; 
+    color: $content-background;
+}
+    
+::selection {
+    background-color: $base-color; 
+    color: $content-background;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+}
+
+a{
+    color: $link_color;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+    text-decoration-color: $link_underline_color;
+    
+    &:hover{
+        text-decoration: none;
+    }
+}
