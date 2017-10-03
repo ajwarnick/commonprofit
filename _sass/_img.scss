@@ -1,0 +1,49 @@
+.full{
+    max-width: 100%;
+}
+
+
+.lead {
+    position: relative;
+    padding: 0;
+    padding-bottom: 30px; 
+    margin: 0;
+    text-align: center;
+    z-index: 10; 
+    min-height: 500px;
+}
+
+.filtered{
+    filter: grayscale(100%);
+    mix-blend-mode: screen;
+    max-width: 100%;
+}
+
+.lead-image{
+    cursor:pointer;
+    position: relative;
+    display: block;
+    background-color: $blue;
+    z-index: 10; 
+    min-height: 500px;
+}
+
+.lead-text{
+    position: absolute;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: 10; 
+}
+
+.lead-text h3{
+    color: black;
+    font-size: 3em;
+    font-weight: 900;
+    display:flex;
+    align-items:center;
+    justify-content:center;  
+    height: 100%;         
+}

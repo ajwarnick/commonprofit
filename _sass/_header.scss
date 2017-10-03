@@ -1,0 +1,25 @@
+header { 
+    width: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px;
+    padding: 10px 10px 0px 60px; 
+    font-size: 30px; 
+    line-height: 30px; 
+    z-index: 1000; 
+    border-bottom: 5px solid black;
+    background: $main_background_color;
+}
+
+.header_nav{
+    float: right;
+    ul{
+        float:left;
+        list-style: none;
+        li{
+            float:left;
+            padding: 0px 10px 0px 10px;
+        }
+    }
+
+}

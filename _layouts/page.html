@@ -4,12 +4,45 @@
   {% include head.html %}
 
   <body>
+      {% include header.html %}
+      
+      {% include sidebar.html %}
+      
+      <div id="page-content">
 
-    {% include sidebar.html %}
 
-    <div class="content container">
-      {{ content }}
-    </div>
 
-  </body>
+
+
+        {% if page.image != "" %}
+
+        <div class="lead">
+            <div class="lead-image">
+              <img src="/img/{{ page.image }}" class="full filtered"/>
+              <div class="lead-text">
+                <h3>{{ page.title }}</h3>
+              </div>    
+          </div>  
+        </div>
+
+
+
+          
+        {% endif %}
+
+
+
+
+
+
+        <div class="main_text">
+            {{ content }}
+        </div>
+
+        
+      </div>
+   </body>
 </html>
+
+
+
