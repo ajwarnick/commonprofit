@@ -1,6 +1,25 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
+description: A description about my blog homepage
 ---
+<div class="index-content">
+    <div id="posts">
+        <h2>Blog Posts</h2>
+        <ul>
+            {% for post in site.posts %}
+            <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="pages">
+        <h2>Pages</h2>
+        <ul>
+            {% for page in site.html_pages %}
+            {% if page.title %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>

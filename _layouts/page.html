@@ -9,37 +9,20 @@
       {% include sidebar.html %}
       
       <div id="page-content">
-
-
-
-
-
         {% if page.image != "" %}
-
-        <div class="lead">
-            <div class="lead-image">
-              <img src="/img/{{ page.image }}" class="full filtered"/>
-              <div class="lead-text">
-                <h3>{{ page.title }}</h3>
-              </div>    
-          </div>  
-        </div>
-
-
-
-          
+          <div class="lead">
+              <div class="lead-image">
+                <img src="/img/{{ page.image }}" class="full filtered"/>
+                <div class="lead-text">
+                  <h3>{{ page.title }}</h3>
+                </div>    
+            </div>  
+          </div>
         {% endif %}
-
-
-
-
-
-
+    
         <div class="main_text">
             {{ content }}
         </div>
-
-        
       </div>
    </body>
 </html>

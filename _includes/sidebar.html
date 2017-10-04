@@ -4,7 +4,25 @@
     </h1>
     <p>{{ site.description }}</p>
 
-    {% include nav.html %}
+    <div id="posts">
+        <p>Posts</p>
+        <ul>
+            {% for post in site.posts %}
+            <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+        
+    <div id="pages">
+        <p>Pages</p>
+        <ul>
+            {% for page in site.html_pages %}
+            {% if page.title %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>

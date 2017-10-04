@@ -9,7 +9,30 @@
       {% include sidebar.html %}
       
       <div id="page-content">
-          {{ content }}
+        
+          <div class="lead">
+              <div class="lead-image">
+                {% if page.image %}
+                    <img src="/img/{{ page.image }}" class="full filtered"/>
+                {% endif %}
+                <div class="lead-text">
+                  <h3>{{ page.title }}</h3>
+                </div>    
+            </div>  
+          </div>
+       
+        
+        <ul class="tags">
+          {% for tag in post.tags %}
+            <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <div class="main_text">
+            {{ content }}
+        </div>
+
+        
       </div>
    </body>
 </html>

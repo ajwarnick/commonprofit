@@ -1,8 +1,7 @@
-    /* actual page content pane */ 
-    
+/* actual page content pane */     
 #page-content { 
     margin-left: 0px; 
-    margin-top: 50px; 
+    margin-top: $header-height; 
     width: 100%; 
     height: calc(100% - 50px); 
     overflow-x:hidden; 
@@ -14,6 +13,15 @@
     
     
 .main_text{
-    max-width: 70%;
+    max-width: 50%;
+    margin: 0 auto;
+
+    img{
+        max-width: 100%;
+    }
+}
+
+.index-content{
+    max-width: 50%;
     margin: 0 auto;
 }

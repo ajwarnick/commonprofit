@@ -1,10 +1,11 @@
  /* gets the actual input out of the way; 
     we're going to style the label instead */ 
+
     
-    #drawer-toggle { 
-        position: absolute; 
-        opacity: 0; 
-        }
+#drawer-toggle { 
+    position: absolute; 
+    opacity: 0; 
+}
         
 #drawer-toggle-label { 
     -webkit-touch-callout: none; 
@@ -22,47 +23,30 @@
     z-index: 1001; 
 } 
         
-        /* adds our "hamburger" menu icon */ 
+/* adds our "hamburger" menu icon */ 
         
 #drawer-toggle-label:before { 
-        content: ''; 
-        display: block; 
-        position: absolute; 
-        height: 2px; 
-        width: 24px; 
-        background: #8d8d8d; 
-        left: 13px; 
-        top: 18px; 
-        box-shadow: 0 6px 0 #8d8d8d, 0 12px 0 #8d8d8d; 
-        } 
- 
- /* drawer menu pane - note the 0px width */ 
-    
- #drawer { 
-    position: fixed; 
-    top: 0; 
-    left:-300px; 
-    height: 100%; 
-    width: 300px; 
-    
-    overflow-x: hidden; 
-    overflow-y: scroll; 
-    padding: 20px; 
-    -webkit-overflow-scrolling: touch;
-    border-right: 5px solid black;
+    content: ''; 
+    display: block; 
+    position: absolute; 
+    height: 4px; 
+    width: 24px; 
+    background: black; 
+    left: 13px; 
+    top: 13px; 
+    box-shadow: 0 10px 0 black, 0 20px 0 black
 } 
-
+ 
 /* checked styles (menu open state) */ 
     
 #drawer-toggle:checked ~ #drawer-toggle-label { 
     height: 100%; 
-    width: calc(100% - 300px); 
-    background: rgba(255,255,255,.8); 
+    width: calc(100% - #{$sidebar-width}); 
 } 
     
 #drawer-toggle:checked ~ #drawer-toggle-label, 
 #drawer-toggle:checked ~ header { 
-left: 300px; 
+left: $sidebar-width; 
 top: 0px;
 } 
     
@@ -72,8 +56,36 @@ top: 0px;
 } 
     
 #drawer-toggle:checked ~ #page-content { 
-    margin-left: 300px; 
+    margin-left: $sidebar-width; 
 }
+
+
+
+
+
+
+
+ /* drawer menu pane - note the 0px width */ 
+    
+ #drawer { 
+    position: fixed; 
+    top: 0; 
+    left: (-$sidebar-width); 
+    height: 100%; 
+    width: $sidebar-width; 
+    
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    padding: 20px; 
+    -webkit-overflow-scrolling: touch;
+    border-right: $border-width $border-style $border-color;
+
+    h1{
+        margin: 0;
+    }
+} 
+
+
     
 /* Menu item styles */     
 #drawer ul { 
@@ -82,35 +94,10 @@ top: 0px;
     
 #drawer ul a { 
     display:block; 
-    padding:10px; 
-    color:#c7c7c7; 
+    color: $link_color; 
     text-decoration:none; 
 } 
 
 #drawer ul a:hover { 
-    color:white; 
+    color:$link_underline_color; 
 } 
-    
-/* Responsive MQ */     
-@media all and (max-width:350px) { 
-    
-    #drawer-toggle:checked ~ #drawer-toggle-label { 
-    height: 100%; 
-    width: 50px; 
-    } 
-    
-    #drawer-toggle:checked ~ #drawer-toggle-label, 
-    #drawer-toggle:checked ~ header { 
-    left: calc(100% - 50px); 
-    } 
-    
-    #drawer-toggle:checked ~ #drawer { 
-    width: calc(100% - 50px); 
-    padding: 20px; 
-    } 
-    
-    #drawer-toggle:checked ~ #page-content { 
-    margin-left: calc(100% - 50px); 
-    } 
-    
-}

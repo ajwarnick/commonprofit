@@ -3,13 +3,16 @@ header {
     position: fixed; 
     left: 0px; 
     top: 0px;
-    padding: 10px 10px 0px 60px; 
+    padding: 12px 0px 0px 60px; 
     font-size: 30px; 
     line-height: 30px; 
+    height: $header-height;
     z-index: 1000; 
-    border-bottom: 5px solid black;
+    border-bottom: $border-width $border-style $border-color;
     background: $main_background_color;
+    box-sizing: border-box;
 }
+
 
 .header_nav{
     float: right;
@@ -22,4 +25,39 @@ header {
         }
     }
 
+    a{
+        text-decoration: none;
+        color: $base-color;
+
+        &:hover{
+            text-decoration: underline;
+            text-decoration-skip: ink;
+            text-decoration-color: $link_underline_color;
+        }
+    }
+}
+
+
+/* Responsive MQ */     
+@media all and (max-width:350px) { 
+    
+    #drawer-toggle:checked ~ #drawer-toggle-label { 
+    height: 100%; 
+    width: 50px; 
+    } 
+    
+    #drawer-toggle:checked ~ #drawer-toggle-label, 
+    #drawer-toggle:checked ~ header { 
+    left: calc(100% - 50px); 
+    } 
+    
+    #drawer-toggle:checked ~ #drawer { 
+    width: calc(100% - 50px); 
+    padding: 20px; 
+    } 
+    
+    #drawer-toggle:checked ~ #page-content { 
+    margin-left: calc(100% - 50px); 
+    } 
+    
 }

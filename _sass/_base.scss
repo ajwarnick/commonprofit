@@ -1,11 +1,11 @@
 ::-moz-selection { 
     background-color: $base-color; 
-    color: $content-background;
+    color: $main_background_color;
 }
     
 ::selection {
     background-color: $base-color; 
-    color: $content-background;
+    color: $main_background_color;
 }
 
 * { 
@@ -20,7 +20,7 @@
 } 
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: $main_font;
     margin: 0px;
     height: 100%; 
 }
@@ -36,3 +36,8 @@ a{
     }
 }
 
+
+
+li > ul {
+    padding-left: 15px; 
+}
